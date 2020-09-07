@@ -13,6 +13,10 @@
   font-size: 30px;
   text-align: center;
 }
+div#top {
+left:0;
+right:0;
+}
 div#main {
 margin-left: 225px;
 min-height: 300px;
@@ -26,6 +30,10 @@ min-height: 300px;
 </head>
 
 <body>
+
+<div id = "top" >
+<h1 align="center">AND Gate</h1>
+</div>
 
 <div id = "sidebar" >
 <%= form_tag("/and_gate", method: :post) %>
@@ -46,10 +54,6 @@ min-height: 300px;
 
 <div id = "main" >
 <div class="grid-container">
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"><%= @gate %></div>
-  <div class="grid-item"></div>
   <div class="grid-item">input a</div>
   <div class="grid-item"><%= @input_a %></div>
   <div class="grid-item"></div>
