@@ -20,6 +20,9 @@ defmodule LogicGatesWeb.Router do
     post "/", PageController, :logic_gates
     get "/and_gate", PageController, :and_gate
     post "/and_gate", PageController, :and_gate
+   get "/or_gate", PageController, :or_gate
+   post "/or_gate", PageController, :or_gate
+
 
   end
 
