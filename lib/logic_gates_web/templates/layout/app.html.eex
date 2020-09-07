@@ -51,6 +51,21 @@ li a:hover:not(.active) {
         <ul>
           <li><a href="and_gate">AND</a></li>
           <li><a href="or_gate">OR</a></li>
+          <li><a href="xor_gate">XOR</a></li>
+          <li><a href="nand_gate">NAND</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+          <li><a href="#_gate">#</a></li>
+
         </ul>
       </nav>
     </header>

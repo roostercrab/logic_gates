@@ -88,6 +88,9 @@
   <%= if @gate == "XOR" do %>
     <%= render_existing @view_module, "xor_gate.html", assigns %>
   <% end %>
+  <%= if @gate == "NAND" do %>
+    <%= render_existing @view_module, "nand_gate.html", assigns %>
+  <% end %>
   <%# template part %>
 
   <p>Input A:</p>

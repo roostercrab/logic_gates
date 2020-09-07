@@ -1,0 +1,7 @@
+<div id = "top" >
+ <h1 align="center">NAND Gate</h1>
+</div>
+<div class="row">
+ <div class="column side">
+   <%= form_tag("/nand_gate", method: :post) %>
+   <input type="hidden" name="gate" value="NAND">

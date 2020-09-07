@@ -58,14 +58,27 @@ defmodule LogicGatesWeb.PageController do
        } = params
      ) do
    output = LogicCalc.take_input("XOR", input_a, input_b)
-   render(conn, "xor_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
  end
 
  def xor_gate(conn, _params) do
-   render(conn, "xor_gate.html", gate: "XOR")
+   render(conn, "default_gate.html", gate: "XOR")
  end
 
+ def nand_gate(
+       conn,
+       %{
+         "gate" => gate,
+         "input_a" => input_a,
+         "input_b" => input_b
+       } = params
+     ) do
+   output = LogicCalc.take_input("NAND", input_a, input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+ end
 
-
+ def nand_gate(conn, _params) do
+   render(conn, "default_gate.html", gate: "NAND")
+ end
 
 end
