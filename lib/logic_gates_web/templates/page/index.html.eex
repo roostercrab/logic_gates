@@ -2,7 +2,37 @@
 <%= form_tag("/", method: :post) %>
     <select name="gate">
       <option value="AND">AND</option>
+
       <option value="OR">OR</option>
+
+      <option value="ALWAYS_FALSE">ALWAYS_FALSE</option>
+
+      <option value="NOR">NOR</option>
+
+      <option value="TRUE_IF_A_AND_NOT_B">TRUE_IF_A_AND_NOT_B</option>
+
+      <option value="NOT_B">NOT_B</option>
+
+      <option value="TRUE_IF_B_AND_NOT_A">TRUE_IF_B_AND_NOT_A</option>
+
+      <option value="NOT_A">NOT_A</option>
+
+      <option value="XOR">XOR</option>
+
+      <option value="NAND">NAND</option>
+
+      <option value="XNOR">XNOR</option>
+
+      <option value="TRUE_A">TRUE_A</option>
+
+      <option value="FALSE_IF_ONLY_B">FALSE_IF_ONLY_B</option>
+
+      <option value="TRUE_B">TRUE_B</option>
+
+      <option value="FALSE_IF_ONLY_A">FALSE_IF_ONLY_A</option>
+
+      <option value="ALWAYS_TRUE">ALWAYS_TRUE</option>
+
     </select>
 <br>
     <select name="input_a">
