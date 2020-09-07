@@ -1,4 +1,33 @@
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2px;
+  font-size: 30px;
+  text-align: center;
+}
+div#main {
+margin-left: 225px;
+min-height: 300px;
+}
+div#sidebar {
+width: 80px;
+position: absolute;
+min-height: 300px;
+}
+</style>
+</head>
 
+<body>
+
+<div id = "sidebar" >
 <%= form_tag("/", method: :post) %>
     <select name="gate">
       <option value="AND">AND</option>
@@ -47,3 +76,26 @@
 <br>
     <input type="submit" value="Submit">
   </form>
+</div>
+<div id = "main" >
+<div class="grid-container">
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item">GATE</div>
+  <div class="grid-item"></div>
+  <div class="grid-item">input a</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item">output</div>
+  <div class="grid-item"></div>
+  <div class="grid-item">input b</div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+
+
+
