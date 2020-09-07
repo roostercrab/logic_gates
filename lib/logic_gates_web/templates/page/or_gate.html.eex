@@ -22,9 +22,12 @@ margin-left: 225px;
 min-height: 300px;
 }
 div#sidebar {
-width: 80px;
+width: 200px;
 position: absolute;
 min-height: 300px;
+}
+input[type="radio"] {
+    margin-left:10px;
 }
 </style>
 </head>
@@ -38,15 +41,18 @@ min-height: 300px;
 <div id = "sidebar" >
 <%= form_tag("/or_gate", method: :post) %>
 <input type="hidden" name="gate" value="OR">
-   <select name="input_a">
-     <option value="0">0</option>
-     <option value="1">1</option>
-   </select>
+
+  <p>Input A:</p>
+  <input type="radio" id="input_a" name="input_a" value="0">
+  <label class="radio-inline" for="input_a">0</label>
+  <input type="radio" id="input_a" name="input_a" value="1">
+  <label class="radio-inline" for="input_a">1</label>
 <br>
-   <select name="input_b">
-     <option value="0">0</option>
-     <option value="1">1</option>
-   </select>
+  <p>Input B:</p>
+  <input type="radio" id="input_b" name="input_b" value="0">
+  <label class="radio-inline" for="input_b">0</label>
+  <input type="radio" id="input_b" name="input_b" value="1">
+  <label class="radio-inline" for="input_b">1</label>
 <br>
    <input type="submit" value="Submit">
  </form>
