@@ -1,31 +1,73 @@
 <head>
 <style>
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: #2196F3;
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
   padding: 10px;
 }
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+.grid-container {
+ display: grid;
+ grid-template-columns: auto auto auto auto;
+ background-color: #2196F3;
+ padding: 10px;
+}
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 2px;
-  font-size: 30px;
-  text-align: center;
+ background-color: rgba(255, 255, 255, 0.8);
+ border: 1px solid rgba(0, 0, 0, 0.8);
+ padding: 2px;
+ font-size: 30px;
+ text-align: center;
 }
 div#top {
 left:0;
 right:0;
 }
-div#main {
-margin-left: 225px;
-min-height: 300px;
-}
-div#sidebar {
-width: 80px;
-position: absolute;
-min-height: 300px;
-}
+fieldset {
+      overflow: hidden
+    }
+
+    .radio-button-class {
+      float: left;
+      clear: none;
+    }
+
+    label {
+      float: left;
+      clear: none;
+      display: block;
+      padding: 0px 1em 0px 8px;
+    }
+
+    input[type=radio],
+    input.radio {
+      float: left;
+      clear: none;
+      margin: 2px 0 0 2px;
+    }
 </style>
 </head>
 
@@ -35,36 +77,62 @@ min-height: 300px;
 <h1 align="center">AND Gate</h1>
 </div>
 
-<div id = "sidebar" >
+<div class="row">
+  <div class="column side">
 <%= form_tag("/and_gate", method: :post) %>
-<input type="hidden" name="gate" value="AND">
-    <select name="input_a">
-      <option value="0">0</option>
-      <option value="1">1</option>
-    </select>
-<br>
-    <select name="input_b">
-      <option value="0">0</option>
-      <option value="1">1</option>
-    </select>
-<br>
-    <input type="submit" value="Submit">
-  </form>
+
+    <input type="hidden" name="gate" value="AND">
+
+    <p>Input A:</p>
+    <fieldset>
+      <div class="radio-button-class">
+
+        <input type="radio" class="radio" name="input_a" value="0" id="input_a" />
+        <label for="input_a">0</label>
+
+        <input type="radio" class="radio" name="input_a" value="1" id="input_a" />
+        <label for="input_a">1</label>
+
+      </div>
+    </fieldset>
+
+    <p>Input B:</p>
+    <fieldset>
+      <div class="radio-button-class">
+        <input type="radio" class="radio" name="input_b" value="0" id="input_b" />
+        <label for="input_b">0</label>
+
+        <input type="radio" class="radio" name="input_b" value="1" id="input_b" />
+        <label for="input_b">1</label>
+
+      </div>
+    </fieldset>
+
+   <input type="submit" value="Submit">
+ </form>
 </div>
 
-<div id = "main" >
+  <div class="column middle">
+    <div id = "main" >
 <div class="grid-container">
-  <div class="grid-item">input a</div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item">output</div>
-  <div class="grid-item"></div>
-  <div class="grid-item">input b</div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
-  <div class="grid-item"></div>
+ <div class="grid-item">input a</div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
+ <div class="grid-item">output</div>
+ <div class="grid-item"></div>
+ <div class="grid-item">input b</div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
+ <div class="grid-item"></div>
 </div>
+  </div>
+
+</div>
+
+
+
+
 
