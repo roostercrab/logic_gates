@@ -133,6 +133,11 @@ fieldset {
 
 </div>
 
+</div>
+
+<div id = "bottom" >
+<h1 align="center"><%= render_existing @view_module, "test.html", assigns %></h1>
+</div>
 
 
 

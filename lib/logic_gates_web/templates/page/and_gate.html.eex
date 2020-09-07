@@ -114,23 +114,26 @@ fieldset {
 
   <div class="column middle">
     <div id = "main" >
-<div class="grid-container">
- <div class="grid-item">input a</div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
- <div class="grid-item">output</div>
- <div class="grid-item"></div>
- <div class="grid-item">input b</div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
- <div class="grid-item"></div>
-</div>
+      <div class="grid-container">
+      <div class="grid-item">input a</div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item">output</div>
+      <div class="grid-item"></div>
+      <div class="grid-item">input b</div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      </div>
+    </div>
   </div>
 
-</div>
+  <div id = "bottom" >
+    <h1 align="center">This is bottom text</h1>
+  </div>
 
 
 
