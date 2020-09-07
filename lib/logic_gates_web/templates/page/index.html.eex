@@ -1,0 +1,19 @@
+
+<%= form_tag("/", method: :post) %>
+    <select name="gate">
+      <option value="AND">AND</option>
+      <option value="OR">OR</option>
+    </select>
+<br>
+    <select name="input_a">
+      <option value="0">0</option>
+      <option value="1">1</option>
+    </select>
+<br>
+    <select name="input_b">
+      <option value="0">0</option>
+      <option value="1">1</option>
+    </select>
+<br>
+    <input type="submit" value="Submit">
+  </form>
