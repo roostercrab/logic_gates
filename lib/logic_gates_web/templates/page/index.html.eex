@@ -27,57 +27,8 @@ min-height: 300px;
 
 <body>
 
-<p align="center">
-<form name="jump" class="center">
-<select onchange="location = this.options[this.selectedIndex].value;">
-    <option>Please select</option>
-    <option value="and_gate">AND</option>
-    <option value="http://www.bbc.com">BBC</option>
-    <option value="http://www.facebook.com">Facebook</option>
-</select>​
-<input type="button" onClick="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO">
-</form>
-</p>
-
-
-
-<%= form_tag("/", method: :post) %>
-    <select name="gate">
-      <option value="AND">AND</option>
-
-      <option value="OR">OR</option>
-
-      <option value="ALWAYS_FALSE">ALWAYS_FALSE</option>
-
-      <option value="NOR">NOR</option>
-
-      <option value="TRUE_IF_A_AND_NOT_B">TRUE_IF_A_AND_NOT_B</option>
-
-      <option value="NOT_B">NOT_B</option>
-
-      <option value="TRUE_IF_B_AND_NOT_A">TRUE_IF_B_AND_NOT_A</option>
-
-      <option value="NOT_A">NOT_A</option>
-
-      <option value="XOR">XOR</option>
-
-      <option value="NAND">NAND</option>
-
-      <option value="XNOR">XNOR</option>
-
-      <option value="TRUE_A">TRUE_A</option>
-
-      <option value="FALSE_IF_ONLY_B">FALSE_IF_ONLY_B</option>
-
-      <option value="TRUE_B">TRUE_B</option>
-
-      <option value="FALSE_IF_ONLY_A">FALSE_IF_ONLY_A</option>
-
-      <option value="ALWAYS_TRUE">ALWAYS_TRUE</option>
-
-    </select>
-
 <div id = "sidebar" >
+<%= form_tag("/", method: :post) %>
     <select name="input_a">
       <option value="0">0</option>
       <option value="1">1</option>

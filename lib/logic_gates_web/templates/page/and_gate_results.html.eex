@@ -48,18 +48,18 @@ min-height: 300px;
 <div class="grid-container">
   <div class="grid-item"></div>
   <div class="grid-item"></div>
-  <div class="grid-item">AND</div>
+  <div class="grid-item"><%= @gate %></div>
   <div class="grid-item"></div>
   <div class="grid-item">input a</div>
-  <div class="grid-item"></div>
+  <div class="grid-item"><%= @input_a %></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
   <div class="grid-item">output</div>
-  <div class="grid-item"></div>
+  <div class="grid-item"><%= @output %></div>
   <div class="grid-item">input b</div>
-  <div class="grid-item"></div>
+  <div class="grid-item"><%= @input_b %></div>
   <div class="grid-item"></div>
   <div class="grid-item"></div>
 </div>
