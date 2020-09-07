@@ -26,11 +26,11 @@ defmodule LogicGatesWeb.PageController do
         } = params
       ) do
     output = LogicCalc.take_input("AND", input_a, input_b)
-    render(conn, "default_gate_results_template.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
   end
 
   def and_gate(conn, _params) do
-    render(conn, "and_gate.html", gate: "AND")
+    render(conn, "default_gate.html", gate: "AND")
   end
 
    def or_gate(
@@ -42,11 +42,11 @@ defmodule LogicGatesWeb.PageController do
        } = params
      ) do
    output = LogicCalc.take_input("OR", input_a, input_b)
-   render(conn, "or_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
  end
 
  def or_gate(conn, _params) do
-   render(conn, "or_gate.html", gate: "OR")
+   render(conn, "default_gate.html", gate: "OR")
  end
 
   def xor_gate(

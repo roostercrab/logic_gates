@@ -1,11 +1,7 @@
-
 <div id = "top" >
-<h1 align="center">XOR Gate</h1>
+  <h1 align="center">XOR Gate</h1>
 </div>
-
 <div class="row">
- <div class="column side">
-<%= form_tag("/xor_gate", method: :post) %>
-
-   <input type="hidden" name="gate" value="XOR">
-
+  <div class="column side">
+    <%= form_tag("/xor_gate", method: :post) %>
+    <input type="hidden" name="gate" value="XOR">
