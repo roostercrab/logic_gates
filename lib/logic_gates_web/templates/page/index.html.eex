@@ -27,7 +27,20 @@ min-height: 300px;
 
 <body>
 
-<div id = "sidebar" >
+<p align="center">
+<form name="jump" class="center">
+<select onchange="location = this.options[this.selectedIndex].value;">
+    <option>Please select</option>
+    <option value="and_gate">AND</option>
+    <option value="http://www.bbc.com">BBC</option>
+    <option value="http://www.facebook.com">Facebook</option>
+</select>​
+<input type="button" onClick="location=document.jump.menu.options[document.jump.menu.selectedIndex].value;" value="GO">
+</form>
+</p>
+
+
+
 <%= form_tag("/", method: :post) %>
     <select name="gate">
       <option value="AND">AND</option>
@@ -63,7 +76,8 @@ min-height: 300px;
       <option value="ALWAYS_TRUE">ALWAYS_TRUE</option>
 
     </select>
-<br>
+
+<div id = "sidebar" >
     <select name="input_a">
       <option value="0">0</option>
       <option value="1">1</option>

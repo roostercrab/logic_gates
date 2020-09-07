@@ -5,7 +5,11 @@ defmodule LogicGatesWeb.PageController do
     render(conn, "index.html")
   end
 
-    def logic_gates(
+  def and_gate(conn, _params) do
+    render(conn, "and_gate.html")
+  end
+
+  def logic_gates(
         conn,
         %{
           "gate" => gate,
@@ -14,7 +18,6 @@ defmodule LogicGatesWeb.PageController do
         } = params
       ) do
     output = LogicCalc.take_input(gate, input_a, input_b)
-    render(conn, "results.html", [gate: gate, output: output, input_a: input_a, input_b: input_b])
+    render(conn, "results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
   end
-
 end

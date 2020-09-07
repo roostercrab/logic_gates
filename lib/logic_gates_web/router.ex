@@ -17,6 +17,7 @@ defmodule LogicGatesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/and_gate", PageController, :and_gate
     post "/", PageController, :logic_gates
   end
 
