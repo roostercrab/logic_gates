@@ -29,12 +29,12 @@ min-height: 300px;
 
 <div id = "sidebar" >
 <%= form_tag("/", method: :post) %>
-    <select name="input_a">
+    <select name="input_a" disabled="true">
       <option value="0">0</option>
       <option value="1">1</option>
     </select>
 <br>
-    <select name="input_b">
+    <select name="input_b" disabled="true">
       <option value="0">0</option>
       <option value="1">1</option>
     </select>
