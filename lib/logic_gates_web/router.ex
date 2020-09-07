@@ -18,6 +18,9 @@ defmodule LogicGatesWeb.Router do
 
     get "/", PageController, :index
     post "/", PageController, :logic_gates
+    get "/and_gate", PageController, :and_gate
+    post "/and_gate", PageController, :and_gate
+
   end
 
   # Other scopes may use custom stacks.

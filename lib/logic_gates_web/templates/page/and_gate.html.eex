@@ -28,7 +28,8 @@ min-height: 300px;
 <body>
 
 <div id = "sidebar" >
-<%= form_tag("/", method: :post) %>
+<%= form_tag("/and_gate", method: :post) %>
+<input type="hidden" name="gate" value="AND">
     <select name="input_a">
       <option value="0">0</option>
       <option value="1">1</option>
@@ -42,11 +43,12 @@ min-height: 300px;
     <input type="submit" value="Submit">
   </form>
 </div>
+
 <div id = "main" >
 <div class="grid-container">
   <div class="grid-item"></div>
   <div class="grid-item"></div>
-  <div class="grid-item">GATE</div>
+  <div class="grid-item">AND</div>
   <div class="grid-item"></div>
   <div class="grid-item">input a</div>
   <div class="grid-item"></div>
@@ -61,6 +63,4 @@ min-height: 300px;
   <div class="grid-item"></div>
   <div class="grid-item"></div>
 </div>
-
-
 
