@@ -79,6 +79,23 @@ defmodule LogicGatesWeb.PageController do
 
  def nand_gate(conn, _params) do
    render(conn, "default_gate.html", gate: "NAND")
+
+ def nor_gate(
+       conn,
+       %{
+         "gate" => gate,
+         "input_a" => input_a,
+         "input_b" => input_b
+       } = params
+     ) do
+   output = LogicCalc.take_input("NOR", input_a, input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+ end
+
+ def nor_gate(conn, _params) do
+   render(conn, "default_gate.html", gate: "NOR")
+ end
+
  end
 
 end
