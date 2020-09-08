@@ -79,6 +79,7 @@ defmodule LogicGatesWeb.PageController do
 
  def nand_gate(conn, _params) do
    render(conn, "default_gate.html", gate: "NAND")
+ end
 
  def nor_gate(
        conn,
@@ -97,5 +98,3 @@ defmodule LogicGatesWeb.PageController do
  end
 
  end
-
-end
