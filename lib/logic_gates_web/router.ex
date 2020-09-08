@@ -30,6 +30,22 @@ defmodule LogicGatesWeb.Router do
     post "/nor_gate", PageController, :nor_gate
     get "/xnor_gate", PageController, :xnor_gate
     post "/xnor_gate", PageController, :xnor_gate
+    get "/false_gate", PageController, :false_gate
+    post "/false_gate", PageController, :false_gate
+    get "/true_gate", PageController, :true_gate
+    post "/true_gate", PageController, :true_gate
+    get "/not_a_gate", PageController, :not_a_gate
+    post "/not_a_gate", PageController, :not_a_gate
+    get "/not_b_gate", PageController, :not_b_gate
+    post "/not_b_gate", PageController, :not_b_gate
+    get "/true_a_gate", PageController, :true_a_gate
+    post "/true_a_gate", PageController, :true_a_gate
+    get "/true_b_gate", PageController, :true_b_gate
+    post "/true_b_gate", PageController, :true_b_gate
+    get "/a_not_b_gate", PageController, :a_not_b_gate
+    post "/a_not_b_gate", PageController, :a_not_b_gate
+   get "/b_not_a_gate", PageController, :b_not_a_gate
+   post "/b_not_a_gate", PageController, :b_not_a_gate
   end
 
   # Other scopes may use custom stacks.

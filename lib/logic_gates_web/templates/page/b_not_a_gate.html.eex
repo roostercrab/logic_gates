@@ -1,0 +1,7 @@
+<div id = "top" >
+ <h1 align="center">B_NOT_A Gate</h1>
+</div>
+<div class="row">
+ <div class="column side">
+   <%= form_tag("/b_not_a_gate", method: :post) %>
+   <input type="hidden" name="gate" value="B_NOT_A">

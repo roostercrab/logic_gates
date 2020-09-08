@@ -97,7 +97,32 @@
  <%= if @gate == "XNOR" do %>
    <%= render_existing @view_module, "xnor_gate.html", assigns %>
  <% end %>
-  <%# template part %>
+ <%= if @gate == "FALSE" do %>
+   <%= render_existing @view_module, "false_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "TRUE" do %>
+   <%= render_existing @view_module, "true_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "NOT_A" do %>
+   <%= render_existing @view_module, "not_a_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "NOT_B" do %>
+   <%= render_existing @view_module, "not_b_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "TRUE_A" do %>
+   <%= render_existing @view_module, "true_a_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "TRUE_B" do %>
+   <%= render_existing @view_module, "true_b_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "A_NOT_B" do %>
+   <%= render_existing @view_module, "a_not_b_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "B_NOT_A" do %>
+   <%= render_existing @view_module, "b_not_a_gate.html", assigns %>
+ <% end %>
+
+<%# template part %>
 
   <p>Input A:</p>
   <fieldset>

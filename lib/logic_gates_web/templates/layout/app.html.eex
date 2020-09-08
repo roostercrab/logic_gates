@@ -55,14 +55,14 @@ li a:hover:not(.active) {
           <li><a href="nand_gate">NAND</a></li>
           <li><a href="nor_gate">NOR</a></li>
           <li><a href="xnor_gate">XNOR</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
+          <li><a href="false_gate">FALSE</a></li>
+          <li><a href="true_gate">TRUE</a></li>
+          <li><a href="not_a_gate">NOT_A</a></li>
+          <li><a href="not_b_gate">NOT_B</a></li>
+          <li><a href="true_a_gate">TRUE_A</a></li>
+          <li><a href="true_b_gate">TRUE_B</a></li>
+          <li><a href="a_not_b_gate">A_NOT_B</a></li>
+          <li><a href="b_not_a_gate">B_NOT_A</a></li>
           <li><a href="#_gate">#</a></li>
           <li><a href="#_gate">#</a></li>
 

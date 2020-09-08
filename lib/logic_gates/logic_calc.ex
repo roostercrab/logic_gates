@@ -7,16 +7,16 @@ defmodule LogicCalc do
     cond do
       gate == "AND" ->
         and_gate(a, b)
-      gate == "ALWAYS_FALSE" ->
-        always_false_gate(a, b)
+      gate == "FALSE" ->
+        false_gate(a, b)
       gate == "NOR" ->
         nor_gate(a, b)
-      gate == "TRUE_IF_A_AND_NOT_B" ->
-        true_if_a_not_b_gate(a, b)
+      gate == "A_NOT_B" ->
+        a_not_b_gate(a, b)
       gate == "NOT_B" ->
         not_b_gate(a, b)
-      gate == "TRUE_IF_B_AND_NOT_A" ->
-        true_if_b_not_a_gate(a, b)
+      gate == "B_NOT_A" ->
+        b_not_a_gate(a, b)
       gate == "NOT_A" ->
         not_a_gate(a, b)
       gate == "XOR" ->
@@ -35,8 +35,8 @@ defmodule LogicCalc do
         false_if_only_a_gate(a, b)
       gate == "OR" ->
         or_gate(a, b)
-      gate == "ALWAYS_TRUE" ->
-        always_true_gate(a, b)
+      gate == "TRUE" ->
+        true_gate(a, b)
     end
   end
 
@@ -56,7 +56,7 @@ defmodule LogicCalc do
     end
   end
 
-  defp always_false_gate(a, b) do
+  defp false_gate(a, b) do
     case {a, b} do
       {0, 0} ->
         0
@@ -85,7 +85,7 @@ defmodule LogicCalc do
     end
   end
 
-  defp true_if_a_not_b_gate(a, b) do
+  defp a_not_b_gate(a, b) do
     case {a, b} do
       {0, 0} ->
         0
@@ -111,7 +111,7 @@ defmodule LogicCalc do
     end
   end
 
-  defp true_if_b_not_a_gate(a, b) do
+  defp b_not_a_gate(a, b) do
     case {a, b} do
       {0, 0} ->
         0
@@ -241,7 +241,7 @@ defmodule LogicCalc do
     end
   end
 
-  defp always_true_gate(a, b) do
+  defp true_gate(a, b) do
     case {a, b} do
       {0, 0} ->
         1
