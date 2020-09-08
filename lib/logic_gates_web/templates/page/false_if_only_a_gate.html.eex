@@ -1,0 +1,7 @@
+<div id = "top" >
+ <h1 align="center">FALSE_IF_ONLY_A Gate</h1>
+</div>
+<div class="row">
+ <div class="column side">
+   <%= form_tag("/false_if_only_a_gate", method: :post) %>
+   <input type="hidden" name="gate" value="FALSE_IF_ONLY_A">

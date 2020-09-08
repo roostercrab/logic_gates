@@ -241,4 +241,35 @@ def b_not_a_gate(
    render(conn, "default_gate.html", gate: "B_NOT_A")
  end
 
+ def false_if_only_a_gate(
+       conn,
+       %{
+         "gate" => gate,
+         "input_a" => input_a,
+         "input_b" => input_b
+       } = params
+     ) do
+   output = LogicCalc.take_input("FALSE_IF_ONLY_A", input_a, input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+ end
+
+ def false_if_only_a_gate(conn, _params) do
+   render(conn, "default_gate.html", gate: "FALSE_IF_ONLY_A")
+ end
+
+ def false_if_only_b_gate(
+       conn,
+       %{
+         "gate" => gate,
+         "input_a" => input_a,
+         "input_b" => input_b
+       } = params
+     ) do
+   output = LogicCalc.take_input("FALSE_IF_ONLY_B", input_a, input_b)
+   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+ end
+
+ def false_if_only_b_gate(conn, _params) do
+   render(conn, "default_gate.html", gate: "FALSE_IF_ONLY_B")
+ end
 end

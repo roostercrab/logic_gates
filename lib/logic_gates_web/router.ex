@@ -46,6 +46,10 @@ defmodule LogicGatesWeb.Router do
     post "/a_not_b_gate", PageController, :a_not_b_gate
    get "/b_not_a_gate", PageController, :b_not_a_gate
    post "/b_not_a_gate", PageController, :b_not_a_gate
+   get "/false_if_only_a_gate", PageController, :false_if_only_a_gate
+   post "/false_if_only_a_gate", PageController, :false_if_only_a_gate
+   get "/false_if_only_b_gate", PageController, :false_if_only_b_gate
+   post "/false_if_only_b_gate", PageController, :false_if_only_b_gate
   end
 
   # Other scopes may use custom stacks.

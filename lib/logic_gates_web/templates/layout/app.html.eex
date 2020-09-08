@@ -27,7 +27,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 2px 4px;
   text-decoration: none;
 }
 
@@ -63,8 +63,8 @@ li a:hover:not(.active) {
           <li><a href="true_b_gate">TRUE_B</a></li>
           <li><a href="a_not_b_gate">A_NOT_B</a></li>
           <li><a href="b_not_a_gate">B_NOT_A</a></li>
-          <li><a href="#_gate">#</a></li>
-          <li><a href="#_gate">#</a></li>
+          <li><a href="false_if_only_a_gate">FioA</a></li>
+          <li><a href="false_if_only_b_gate">FioB</a></li>
 
         </ul>
       </nav>

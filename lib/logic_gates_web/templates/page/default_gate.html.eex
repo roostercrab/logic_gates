@@ -121,6 +121,12 @@
  <%= if @gate == "B_NOT_A" do %>
    <%= render_existing @view_module, "b_not_a_gate.html", assigns %>
  <% end %>
+ <%= if @gate == "FALSE_IF_ONLY_A" do %>
+   <%= render_existing @view_module, "false_if_only_a_gate.html", assigns %>
+ <% end %>
+ <%= if @gate == "FALSE_IF_ONLY_B" do %>
+   <%= render_existing @view_module, "false_if_only_b_gate.html", assigns %>
+ <% end %>
 
 <%# template part %>
 
