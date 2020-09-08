@@ -33,7 +33,71 @@ defmodule LogicGatesWeb.PageController do
     render(conn, "default_gate.html", gate: "AND")
   end
 
-   def or_gate(
+    def or_gate(
+        conn,
+        %{
+          "gate" => gate,
+          "input_a" => input_a,
+          "input_b" => input_b
+        } = params
+      ) do
+    output = LogicCalc.take_input("OR", input_a, input_b)
+    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+  end
+
+  def or_gate(conn, _params) do
+    render(conn, "default_gate.html", gate: "OR")
+  end
+
+    def xor_gate(
+        conn,
+        %{
+          "gate" => gate,
+          "input_a" => input_a,
+          "input_b" => input_b
+        } = params
+      ) do
+    output = LogicCalc.take_input("XOR", input_a, input_b)
+    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+  end
+
+  def xor_gate(conn, _params) do
+    render(conn, "default_gate.html", gate: "XOR")
+  end
+
+  def nand_gate(
+        conn,
+        %{
+          "gate" => gate,
+          "input_a" => input_a,
+          "input_b" => input_b
+        } = params
+      ) do
+    output = LogicCalc.take_input("NAND", input_a, input_b)
+    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+  end
+
+  def nand_gate(conn, _params) do
+    render(conn, "default_gate.html", gate: "NAND")
+  end
+
+  def nor_gate(
+        conn,
+        %{
+          "gate" => gate,
+          "input_a" => input_a,
+          "input_b" => input_b
+        } = params
+      ) do
+    output = LogicCalc.take_input("NOR", input_a, input_b)
+    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
+  end
+
+  def nor_gate(conn, _params) do
+    render(conn, "default_gate.html", gate: "NOR")
+  end
+
+ def xnor_gate(
        conn,
        %{
          "gate" => gate,
@@ -41,60 +105,12 @@ defmodule LogicGatesWeb.PageController do
          "input_b" => input_b
        } = params
      ) do
-   output = LogicCalc.take_input("OR", input_a, input_b)
+   output = LogicCalc.take_input("XNOR", input_a, input_b)
    render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
  end
 
- def or_gate(conn, _params) do
-   render(conn, "default_gate.html", gate: "OR")
+ def xnor_gate(conn, _params) do
+   render(conn, "default_gate.html", gate: "XNOR")
  end
 
-  def xor_gate(
-       conn,
-       %{
-         "gate" => gate,
-         "input_a" => input_a,
-         "input_b" => input_b
-       } = params
-     ) do
-   output = LogicCalc.take_input("XOR", input_a, input_b)
-   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
- end
-
- def xor_gate(conn, _params) do
-   render(conn, "default_gate.html", gate: "XOR")
- end
-
- def nand_gate(
-       conn,
-       %{
-         "gate" => gate,
-         "input_a" => input_a,
-         "input_b" => input_b
-       } = params
-     ) do
-   output = LogicCalc.take_input("NAND", input_a, input_b)
-   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
- end
-
- def nand_gate(conn, _params) do
-   render(conn, "default_gate.html", gate: "NAND")
- end
-
- def nor_gate(
-       conn,
-       %{
-         "gate" => gate,
-         "input_a" => input_a,
-         "input_b" => input_b
-       } = params
-     ) do
-   output = LogicCalc.take_input("NOR", input_a, input_b)
-   render(conn, "default_gate_results.html", gate: gate, output: output, input_a: input_a, input_b: input_b)
- end
-
- def nor_gate(conn, _params) do
-   render(conn, "default_gate.html", gate: "NOR")
- end
-
- end
+end

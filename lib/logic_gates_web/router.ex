@@ -27,7 +27,10 @@ defmodule LogicGatesWeb.Router do
     get "/nand_gate", PageController, :nand_gate
     post "/nand_gate", PageController, :nand_gate
     get "/nor_gate", PageController, :nor_gate
-    post "/nor_gate", PageController, :nor_gate  end
+    post "/nor_gate", PageController, :nor_gate
+    get "/xnor_gate", PageController, :xnor_gate
+    post "/xnor_gate", PageController, :xnor_gate
+  end
 
   # Other scopes may use custom stacks.
   # scope "/api", LogicGatesWeb do

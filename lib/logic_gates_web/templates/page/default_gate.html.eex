@@ -94,8 +94,11 @@
   <%= if @gate == "NOR" do %>
     <%= render_existing @view_module, "nor_gate.html", assigns %>
   <% end %>
+ <%= if @gate == "XNOR" do %>
+   <%= render_existing @view_module, "xnor_gate.html", assigns %>
+ <% end %>
 
-  <%# template part %>
+<%# template part %>
 
   <p>Input A:</p>
   <fieldset>
